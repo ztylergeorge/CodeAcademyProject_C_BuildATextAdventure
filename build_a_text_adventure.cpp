@@ -11,44 +11,44 @@ int main() {
     std::cin >> district;
     std::cout << "Welcome " << name << " of District " << district << "!\nMay the odds be ever in your favor.\n";
     std::cout << "============================\n";
+    std::cout << "The Hunger Games start in 5...4...3...2...1...\n";
 
     //initialize alive variable and respond variable
-    bool alive = true;
+    bool dead = false;
     std::string answer;
-
-    while (alive) {
-
+    while (true) {
+        
         //ask first question
-        std::cout << "The Hunger Games start in 5...4...3...2...1...\n";
         std::cout << "There are great resources on the inside of the Cornucopia. Tools and food galore!" << 
                         "There are some tools and food on the outside of it, but not as many and not as resourceful. You decide to: \n";
         std::cout << "   A: Grab resources inside of the Cornucopia\n   B: Grab resources outside of the Cornucopia\n";
-        std:: cin >> answer;
+        std::cin >> answer;
 
-        if (answer == "B") {
-            std::cout << "You successfully grabbed resources.\n";
-        }
-        else if (answer == "A") {
+        if (answer == "A") {
             std::cout << "You were killed in the bloodbath of the Cornucopia.\n";
-            alive = false;
-            break;
+            dead = true;
+        }
+        else if (answer == "B") {
+            std::cout << "You successfully grabbed resources.\n";
         }
         else {
             std::cout << "You entered an incorrect key.\n";
         }
 
+        std::cout << dead << "\n";
+
         //ask second question
         std::cout << "============================\n";
         std::cout << "You are running in the woods and stumble upon another tribute. You decide to: \n";
         std::cout << "   A: Attempt to kill them\n   B: Ally with them\n";
-        std:: cin >> answer;
+        std::cin >> answer;
 
         if (answer == "B") {
-            std::cout << "You successfully make an ally.\n";
+            std::cout << "You were killed in the fight with the tribute.\n";
+            dead = true;
         }
         else if (answer == "A") {
-            std::cout << "You were killed in the fight with the tribute.\n";
-            alive = false;
+            std::cout << "You successfully make an ally.\n"; 
         }
         else {
             std::cout << "You entered an incorrect key.\n";
@@ -102,7 +102,7 @@ int main() {
 
     //output victory
     std::cout << "============================\n";
-    if (alive) {
+    if (dead) {
         std::cout << "Congratulations " << name << " of District " << district << "!\nYou are the victor of The Hunger Games!\n";
     }
 
