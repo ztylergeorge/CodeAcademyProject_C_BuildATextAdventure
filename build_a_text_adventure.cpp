@@ -19,12 +19,62 @@ int main() {
     std::cout << "   A: Grab resources inside of the Cornucopia\n   B: Grab resources outside of the Cornucopia\n";
 
     //ask second question
+    std::cout << "============================\n";
     std::cout << "You are running in the woods and stumble upon another tribute. You decide to: \n";
     std::cout << "   A: Attempt to kill them\n   B: Ally with them\n";
 
     //ask third question
+    std::cout << "============================\n";
     std::cout << "You and your new ally set up camp for the night. You hear them grab food and tools from your bag. You decide to: \n";
     std::cout << "   A: Kill them\n   B: Ignore them\n";
+
+    //ask fourth question
+    std::cout << "============================\n";
+    std::cout << "You wake up to the smell of smoke. The forest is on fire! You start running, but your new ally trips and falls! You decide to: \n";
+    std::cout << "   A: Leave them\n   B: Get them\n";
+
+    //ask fifth question
+    std::cout << "============================\n";
+    std::cout << "You and your ally make it out of the fire. You have minor injuries, but your ally is in bad condition. There is only 1 first aid kit left. You decide to: \n";
+    std::cout << "   A: Use it on your ally\n   B: Hold onto it for a later time\n";
+
+    //ask sixth question
+    std::cout << "============================\n";
+    std::cout << "You find out that a luxury prize in the center of the Cornucopia. You decide to: \n";
+    std::cout << "   A: Get the prize\n   B: Not get the prize\n";
+
+    //ask seventh question
+    std::cout << "============================\n";
+    std::cout << "You and your ally are the only ones at the center of the Cornucopia. There is only 1 prize." <<
+                    "They start to attack you. You decide to: \n";
+    std::cout << "   A: Attempt to calm them down\n   B: Attempt to kill them\n";
+
+    //ask eigth question
+    std::cout << "============================\n";
+    std::cout << "You successfully kill your former ally. But it came at a cost: the other remaining tributues know where you are." <<
+                    "You decide to: \n";
+    std::cout << "   A: Hide deep in the cornucopia\n   B: Run away from the area\n";
+
+    //ask ninth question
+    std::cout << "============================\n";
+    std::cout << "No one found you in the Corncucopia. You start to walk away, but then a group of muttations are released and are charging at you." <<
+                    "You decide to: \n";
+    std::cout << "   A: Attempt to climb the Cornucopia\n   B: Fight off the muttations\n";
+    
+    //ask tenth question
+    std::cout << "============================\n";
+    std::cout << "You fight off of the muttations. The last remaining tribute is charging at you with a sword. Your weapons are away from you." <<
+                    "You decide to: \n";
+    std::cout << "   A: Run and jump out of the way when they lodge\n   B: Duck and roll into their legs\n";
+
+    //output victory
+    std::cout << "============================\n";
+    std::cout << "Congratulations " << name << " of District " << district << "!\nYou are the victor of The Hunger Games!\n";
+
+
+
+
+
 
 
 
