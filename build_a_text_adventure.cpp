@@ -2,27 +2,53 @@
 
 int main() {
 
-    //give initial prompt
+    //give initial prompt and set initial variables
     std::string name;
     int district;
+    bool valid = false; 
+
     std::cout << "Welcome to the Hunger Games of 2021! What is your name?\n";
     std::cin >> name;
-    std::cout << "Well, " << name << ", what district are you from? 1, 2,...12?\n";
-    std::cin >> district;
+
+    while (!valid) {
+        std::cout << "Well, " << name << ", what district are you from? 1, 2,...12?\n";
+        std::cin >> district;
+
+        if (district >= 1 && district <= 12) {
+            valid = true;
+        }
+        else {
+            std::cout << district << " is an incorrect district.\n";
+        }
+    }
+
     std::cout << "Welcome " << name << " of District " << district << "!\nMay the odds be ever in your favor.\n";
     std::cout << "============================\n";
     std::cout << "The Hunger Games start in 5...4...3...2...1...\n";
 
-    //initialize alive variable and respond variable
+    //initialize alive variable, answer variable, and valid variable
     bool dead = false;
     std::string answer;
+    valid = false;
+
+
     while (true) {
         
         //ask first question
         std::cout << "There are great resources on the inside of the Cornucopia. Tools and food galore!" << 
                         "There are some tools and food on the outside of it, but not as many and not as resourceful. You decide to: \n";
         std::cout << "   A: Grab resources inside of the Cornucopia\n   B: Grab resources outside of the Cornucopia\n";
-        std::cin >> answer;
+
+        while (!valid) {
+            std::cin >> answer;
+
+            if (answer == "A" || answer == "B") {
+                valid = true;
+            }
+            else {
+                std::cout << "You entered an incorrect key. Please try again.\n";
+            }
+        }
 
         if (answer == "A") {
             std::cout << "You were killed in the bloodbath of the Cornucopia.\n";
@@ -32,9 +58,8 @@ int main() {
         else if (answer == "B") {
             std::cout << "You successfully grabbed resources.\n";
         }
-        else {
-            std::cout << "You entered an incorrect key.\n";
-        }
+
+        valid = false;
 
         //ask second question
         std::cout << "============================\n";
