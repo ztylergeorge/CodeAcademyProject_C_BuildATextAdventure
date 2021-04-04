@@ -65,25 +65,43 @@ int main() {
         std::cout << "============================\n";
         std::cout << "You are running in the woods and stumble upon another tribute. You decide to: \n";
         std::cout << "   A: Attempt to kill them\n   B: Ally with them\n";
-        std::cin >> answer;
+        while (!valid) {
+            std::cin >> answer;
+
+            if (answer == "A" || answer == "B") {
+                valid = true;
+            }
+            else {
+                std::cout << "You entered an incorrect key. Please try again.\n";
+            }
+        }
 
         if (answer == "A") {
             std::cout << "You were killed in the fight with the tribute.\n";
             dead = true;
             break;
         }
+
         else if (answer == "B") {
             std::cout << "You successfully make an ally.\n"; 
         }
-        else {
-            std::cout << "You entered an incorrect key.\n";
-        }
+
+        valid = false;
 
         //ask third question
         std::cout << "============================\n";
         std::cout << "You and your new ally set up camp for the night. You hear them grab food and tools from your bag. You decide to: \n";
         std::cout << "   A: Kill them\n   B: Ignore them\n";
-        std::cin >> answer;
+
+        while (!valid) {
+            std::cin >> answer;
+            if (answer == "A" || answer == "B") {
+                valid = true;
+            }
+            else {
+                std::cout << "You entered an incorrect key. Please try again.\n";
+            }
+        }
 
         if (answer == "A") {
             std::cout << "The tribute kills you as you attempt to kill them.\n";
@@ -93,15 +111,22 @@ int main() {
         else if (answer == "B") {
             std::cout << "The ally stops going through your bag and goes back to sleep.\n"; 
         }
-        else {
-            std::cout << "You entered an incorrect key.\n";
-        }
+        
+        valid = false;
 
         //ask fourth question
         std::cout << "============================\n";
         std::cout << "You wake up to the smell of smoke. The forest is on fire! You start running, but your new ally trips and falls! You decide to: \n";
         std::cout << "   A: Leave them\n   B: Get them\n";
-        std::cin >> answer;
+        while (!valid) {
+            std::cin >> answer;
+            if (answer == "A" || answer == "B") {
+                valid = true;
+            }
+            else {
+                std::cout << "You entered an incorrect key. Please try again.\n";
+            }
+        }
 
         if (answer == "A") {
             std::cout << "You end up tripping and falling as well. The fire consumes you.\n";
@@ -111,15 +136,22 @@ int main() {
         else if (answer == "B") {
             std::cout << "You grab your ally successfully.\n"; 
         }
-        else {
-            std::cout << "You entered an incorrect key.\n";
-        }
+
+        valid = false;
 
         //ask fifth question
         std::cout << "============================\n";
         std::cout << "You and your ally make it out of the fire. You have minor injuries, but your ally is in bad condition. There is only 1 first aid kit left. You decide to: \n";
         std::cout << "   A: Use it on your ally\n   B: Hold onto it for a later time\n";
-        std::cin >> answer;
+        while (!valid) {
+            std::cin >> answer;
+            if (answer == "A" || answer == "B") {
+                valid = true;
+            }
+            else {
+                std::cout << "You entered an incorrect key. Please try again.\n";
+            }
+        }
 
         if (answer == "B") {
             std::cout << "The medicine that starts to expire inside of the kit is toxic. It poisons you and your ally.\n";
@@ -129,15 +161,22 @@ int main() {
         else if (answer == "A") {
             std::cout << "You treat your ally and they make a full recovery.\n"; 
         }
-        else {
-            std::cout << "You entered an incorrect key.\n";
-        }
+        
+        valid = false;
 
         //ask sixth question
         std::cout << "============================\n";
         std::cout << "You find out that a luxury prize in the center of the Cornucopia. You decide to: \n";
         std::cout << "   A: Get the prize\n   B: Not get the prize\n";
-        std::cin >> answer;
+        while (!valid) {
+            std::cin >> answer;
+            if (answer == "A" || answer == "B") {
+                valid = true;
+            }
+            else {
+                std::cout << "You entered an incorrect key. Please try again.\n";
+            }
+        }
 
         if (answer == "B") {
             std::cout << "The area surrounding the Cornucopia starts to flood. You cannot swim.\n";
@@ -147,16 +186,23 @@ int main() {
         else if (answer == "A") {
             std::cout << "You go to the Cornucopia.\n"; 
         }
-        else {
-            std::cout << "You entered an incorrect key.\n";
-        }
+        
+        valid = false;
 
         //ask seventh question
         std::cout << "============================\n";
         std::cout << "You and your ally are the only ones at the center of the Cornucopia. There is only 1 prize." <<
                         "They start to attack you. You decide to: \n";
         std::cout << "   A: Attempt to calm them down\n   B: Attempt to kill them\n";
-        std::cin >> answer;
+        while (!valid) {
+            std::cin >> answer;
+            if (answer == "A" || answer == "B") {
+                valid = true;
+            }
+            else {
+                std::cout << "You entered an incorrect key. Please try again.\n";
+            }
+        }
 
         if (answer == "A") {
             std::cout << "Calming them down makes it worse. They kill you.\n";
@@ -166,16 +212,23 @@ int main() {
         else if (answer == "B") {
             std::cout << "You kill your ally.\n"; 
         }
-        else {
-            std::cout << "You entered an incorrect key.\n";
-        }
+        
+        valid = false;
 
         //ask eigth question
         std::cout << "============================\n";
         std::cout << "You successfully kill your former ally. But it came at a cost: the other remaining tributues know where you are." <<
                         "You decide to: \n";
         std::cout << "   A: Hide deep in the cornucopia\n   B: Run away from the area\n";
-        std::cin >> answer;
+        while (!valid) {
+            std::cin >> answer;
+            if (answer == "A" || answer == "B") {
+                valid = true;
+            }
+            else {
+                std::cout << "You entered an incorrect key. Please try again.\n";
+            }
+        }
 
         if (answer == "B") {
             std::cout << "You ran into another tribute. They kill you.\n";
@@ -185,16 +238,23 @@ int main() {
         else if (answer == "A") {
             std::cout << "You successfully hid from the other tributes.\n"; 
         }
-        else {
-            std::cout << "You entered an incorrect key.\n";
-        }
+        
+        valid = false;
 
         //ask ninth question
         std::cout << "============================\n";
         std::cout << "No one found you in the Corncucopia. You start to walk away, but then a group of muttations are released and are charging at you." <<
                         "You decide to: \n";
         std::cout << "   A: Attempt to climb the Cornucopia\n   B: Fight off the muttations\n";
-        std::cin >> answer;
+        while (!valid) {
+            std::cin >> answer;
+            if (answer == "A" || answer == "B") {
+                valid = true;
+            }
+            else {
+                std::cout << "You entered an incorrect key. Please try again.\n";
+            }
+        }
 
         if (answer == "A") {
             std::cout << "The edge of the Cornucopia is smooth and cannot be climbed. You do not make it.\n";
@@ -204,16 +264,23 @@ int main() {
         else if (answer == "B") {
             std::cout << "You successfully fend off the muttations.\n"; 
         }
-        else {
-            std::cout << "You entered an incorrect key.\n";
-        }
+
+        valid = false;
         
         //ask tenth question
         std::cout << "============================\n";
         std::cout << "You fight off of the muttations. The last remaining tribute is charging at you with a sword. Your weapons are away from you." <<
                         "You decide to: \n";
         std::cout << "   A: Run and jump out of the way when they lunge\n   B: Duck and roll into their legs\n";
-        std::cin >> answer;
+        while (!valid) {
+            std::cin >> answer;
+            if (answer == "A" || answer == "B") {
+                valid = true;
+            }
+            else {
+                std::cout << "You entered an incorrect key. Please try again.\n";
+            }
+        }
 
         if (answer == "B") {
             std::cout << "The sword swings down and kills you.\n";
@@ -223,9 +290,7 @@ int main() {
         else if (answer == "A") {
             std::cout << "They lunge right into a force field, killing them.\n"; 
         }
-        else {
-            std::cout << "You entered an incorrect key.\n";
-        }
+        
 
         break;
 
