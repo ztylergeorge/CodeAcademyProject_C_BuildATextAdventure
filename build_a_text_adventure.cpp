@@ -1,3 +1,18 @@
+/**
+ * @file build_a_text_adventure.cpp
+ * @author Zachary George
+ * @brief 
+ * This is a build a text adventure exercise from Code Academy Pro
+ * It will put the user in the middle of the younger games and pose with them with questions.
+ * The answers will lead them to their victory or death
+ * This option does not include exception handling yet
+ * @version 0.1
+ * @date 2021-04-03
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #include <iostream>
 
 int main() {
