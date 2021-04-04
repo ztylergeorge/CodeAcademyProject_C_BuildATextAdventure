@@ -305,7 +305,6 @@ int main() {
         else if (answer == "A") {
             std::cout << "They lunge right into a force field, killing them.\n"; 
         }
-        
 
         break;
 
@@ -317,17 +316,19 @@ int main() {
         std::cout << "Congratulations " << name << " of District " << district << "!\nYou are the victor of The Hunger Games!\n";
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
